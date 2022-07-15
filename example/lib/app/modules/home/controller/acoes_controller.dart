@@ -59,7 +59,11 @@ class AcoesController with AsyncStateMixin {
     return await ElginSat.instance.bloquearSat(codigoAtivacao: codAtivacao).asyncLoader();
   }
 
-  Future<ResponseNotaEmitida?> enviarVenda({required String venda, required int numeroSessao, required String codigoAtivacao}) async {
+  Future<ResponseNota?> enviarVenda({required String venda, required int numeroSessao, required String codigoAtivacao}) async {
     return await ElginSat.instance.enviarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, venda: venda);
+  }
+
+  Future<ResponseNota?> cancelarVenda({required int numeroSessao, required String codigoAtivacao, required String chave, required String cancelamento}) async {
+    return await ElginSat.instance.cancelarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, chave: chave, cancelamento: cancelamento);
   }
 }

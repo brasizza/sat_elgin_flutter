@@ -139,6 +139,13 @@ public class ElginSatPlugin implements FlutterPlugin, MethodCallHandler, Activit
         break;
 
 
+      case "cancelarVenda":
+        HashMap dadosCancelamento = call.argument("dadosCancelamento");
+        codAtivacao = call.argument("codigoAtivacao");
+        result.success(sat.cancelarVenda(numeroSessao,codAtivacao, dadosCancelamento));
+        break;
+
+
 
 
 

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class ResponseNotaEmitida {
+class ResponseNota {
   final String numeroSessao;
   final String codStatus;
   final String codAlerta;
@@ -14,7 +14,7 @@ class ResponseNotaEmitida {
   final String valorTotal;
   final String dadosCnpj;
   final String assinaturaQrcode;
-  ResponseNotaEmitida({
+  ResponseNota({
     required this.numeroSessao,
     required this.codStatus,
     required this.codAlerta,
@@ -29,8 +29,8 @@ class ResponseNotaEmitida {
     required this.assinaturaQrcode,
   });
 
-  ResponseNotaEmitida copyWith({String? numeroSessao, String? codStatus, String? mensagem, String? cod, String? mensagemSefaz, String? xmlBase64, String? timeStamp, String? chave, String? valorTotal, String? dadosCnpj, String? assinaturaQrcode, String? codAlerta}) {
-    return ResponseNotaEmitida(
+  ResponseNota copyWith({String? numeroSessao, String? codStatus, String? mensagem, String? cod, String? mensagemSefaz, String? xmlBase64, String? timeStamp, String? chave, String? valorTotal, String? dadosCnpj, String? assinaturaQrcode, String? codAlerta}) {
+    return ResponseNota(
       numeroSessao: numeroSessao ?? this.numeroSessao,
       codStatus: codStatus ?? this.codStatus,
       mensagem: mensagem ?? this.mensagem,
@@ -62,8 +62,8 @@ class ResponseNotaEmitida {
     };
   }
 
-  factory ResponseNotaEmitida.fromMap(Map<String, dynamic> map) {
-    return ResponseNotaEmitida(
+  factory ResponseNota.fromMap(Map<String, dynamic> map) {
+    return ResponseNota(
       numeroSessao: map['numeroSessao'] as String,
       codStatus: map['codStatus'] as String,
       mensagem: map['mensagem'] as String,
@@ -81,15 +81,15 @@ class ResponseNotaEmitida {
 
   String toJson() => json.encode(toMap());
 
-  factory ResponseNotaEmitida.fromJson(String source) => ResponseNotaEmitida.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ResponseNota.fromJson(String source) => ResponseNota.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
-    return 'ResponseNotaEmitida(numeroSessao: $numeroSessao, codStatus: $codStatus, mensagem: $mensagem, cod: $cod, mensagemSefaz: $mensagemSefaz, xmlBase64: $xmlBase64, timeStamp: $timeStamp, chave: $chave, valorTotal: $valorTotal, dadosCnpj: $dadosCnpj, assinaturaQrcode: $assinaturaQrcode)';
+    return 'ResponseNota(numeroSessao: $numeroSessao, codStatus: $codStatus, mensagem: $mensagem, cod: $cod, mensagemSefaz: $mensagemSefaz, xmlBase64: $xmlBase64, timeStamp: $timeStamp, chave: $chave, valorTotal: $valorTotal, dadosCnpj: $dadosCnpj, assinaturaQrcode: $assinaturaQrcode)';
   }
 
   @override
-  bool operator ==(covariant ResponseNotaEmitida other) {
+  bool operator ==(covariant ResponseNota other) {
     if (identical(this, other)) return true;
 
     return other.numeroSessao == numeroSessao && other.codStatus == codStatus && other.mensagem == mensagem && other.cod == cod && other.mensagemSefaz == mensagemSefaz && other.xmlBase64 == xmlBase64 && other.timeStamp == timeStamp && other.chave == chave && other.valorTotal == valorTotal && other.dadosCnpj == dadosCnpj && other.assinaturaQrcode == assinaturaQrcode;
@@ -100,9 +100,9 @@ class ResponseNotaEmitida {
     return numeroSessao.hashCode ^ codStatus.hashCode ^ mensagem.hashCode ^ cod.hashCode ^ mensagemSefaz.hashCode ^ xmlBase64.hashCode ^ timeStamp.hashCode ^ chave.hashCode ^ valorTotal.hashCode ^ dadosCnpj.hashCode ^ assinaturaQrcode.hashCode;
   }
 
-  factory ResponseNotaEmitida.fromSat(List<String?> consulta) {
+  factory ResponseNota.fromSat(List<String?> consulta) {
     final consultaMap = consulta.asMap();
-    final status = ResponseNotaEmitida(
+    final status = ResponseNota(
       numeroSessao: consulta[0] ?? '',
       codStatus: consulta[1] ?? '',
       codAlerta: consulta[2] ?? '',

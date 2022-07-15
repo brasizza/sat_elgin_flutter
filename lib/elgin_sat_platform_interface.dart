@@ -63,7 +63,11 @@ abstract class ElginSatPlatform extends PlatformInterface {
     throw UnimplementedError('bloquearSat() has not been implemented.');
   }
 
-  Future<ResponseNotaEmitida?> enviarVenda({required int numeroSessao, required String codigoAtivacao, required String venda}) {
+  Future<ResponseNota?> enviarVenda({required int numeroSessao, required String codigoAtivacao, required String venda}) {
     throw UnimplementedError('enviarVenda() has not been implemented.');
+  }
+
+  Future<ResponseNota?> cancelarVenda({required int numeroSessao, required String codigoAtivacao, required String chave, required String cancelamento}) {
+    throw UnimplementedError('cancelarVenda() has not been implemented.');
   }
 }

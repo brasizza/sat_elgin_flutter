@@ -133,7 +133,7 @@ class MethodChannelElginSat extends ElginSatPlatform {
   }
 
   @override
-  Future<ResponseNotaEmitida?> enviarVenda({required int numeroSessao, required String codigoAtivacao, required String venda}) async {
+  Future<ResponseNota?> enviarVenda({required int numeroSessao, required String codigoAtivacao, required String venda}) async {
     final enviaVenda = await methodChannel.invokeMethod<String>('enviarVenda', {'numeroSessao': numeroSessao, 'codigoAtivacao': codigoAtivacao, 'xml': venda});
     if (enviaVenda != null) {
       List<String?> consulta = enviaVenda.split('|');
@@ -141,7 +141,23 @@ class MethodChannelElginSat extends ElginSatPlatform {
         log(consulta.toString());
         return null;
       }
-      return ResponseNotaEmitida.fromSat(consulta);
+      return ResponseNota.fromSat(consulta);
+    } else {
+      return null;
+    }
+  }
+
+  @override
+  Future<ResponseNota?> cancelarVenda({required int numeroSessao, required String codigoAtivacao, required String chave, required String cancelamento}) async {
+    Map<String, dynamic> dadosCancelamento = {'cFeCancelar': chave, 'xmlCancelamento': cancelamento};
+    final cancelaVenda = await methodChannel.invokeMethod<String>('cancelarVenda', {'numeroSessao': numeroSessao, 'codigoAtivacao': codigoAtivacao, 'dadosCancelamento': dadosCancelamento});
+    if (cancelaVenda != null) {
+      List<String?> consulta = cancelaVenda.split('|');
+      if (consulta.length < 2) {
+        log(consulta.toString());
+        return null;
+      }
+      return ResponseNota.fromSat(consulta);
     } else {
       return null;
     }

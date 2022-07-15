@@ -61,15 +61,11 @@ public class ServiceSat {
         return retorno;
     }
 
-    public String cancelarVenda(Map map) {
+    public String cancelarVenda(int numSessao, String codAtivacao, Map map) {
         String retorno = "...";
-
-        int numSessao = (int) map.get("numSessao");
-        String codAtivacao = (String) map.get("codAtivacao");
-        String cFeNumber = (String) map.get("cFeNumber");
+        String cFeCancelar = (String) map.get("cFeCancelar");
         String xmlCancelamento = (String) map.get("xmlCancelamento");
-
-        retorno = Sat.cancelarUltimaVenda(numSessao, codAtivacao, cFeNumber, xmlCancelamento);
+        retorno = Sat.cancelarUltimaVenda(numSessao, codAtivacao, cFeCancelar, xmlCancelamento);
         return retorno;
     }
 
