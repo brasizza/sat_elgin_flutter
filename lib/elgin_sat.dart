@@ -32,18 +32,23 @@ class ElginSat {
   }
 
   //Faz a consulta do status operacional e retorna um objeto [ResponseStatus] com os dados
-  Future<ResponseStatus?> consultarStatusSat({int? numeroSessao, required String codigoAtivacao}) async {
-    return await ElginSatPlatform.instance.consultarStatusSat(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao);
+  Future<ResponseStatus?> consultarStatusSat(
+      {int? numeroSessao, required String codigoAtivacao}) async {
+    return await ElginSatPlatform.instance.consultarStatusSat(
+        numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao);
   }
 
   //Faz a consulta do status simples e retorna um objeto [ResponseStatus] com os dados
   Future<ResponseStatus?> consultarSat({int? numeroSessao}) async {
-    return await ElginSatPlatform.instance.consultarSat(numeroSessao: numeroSessao);
+    return await ElginSatPlatform.instance
+        .consultarSat(numeroSessao: numeroSessao);
   }
 
   //Faz a ativação do sat e retorna um objeto [ResponseAtivacao] com os dados
-  Future<ResponseAtivacao?> ativarSat({required Map<String, dynamic> dadosAtivacao}) async {
-    return await ElginSatPlatform.instance.ativarSat(dadosAtivacao: dadosAtivacao);
+  Future<ResponseAtivacao?> ativarSat(
+      {required Map<String, dynamic> dadosAtivacao}) async {
+    return await ElginSatPlatform.instance
+        .ativarSat(dadosAtivacao: dadosAtivacao);
   }
 
   //Extrai todos os logs do sat e retorna um  objeto [ResponseLog] com os dados
@@ -52,12 +57,15 @@ class ElginSat {
   }
 
   //Faz a assinatura do sat e retorna um objeto [ResponseAssinatura] com os dados
-  Future<ResponseAssinatura?> associarAssinatura({required Map<String, dynamic> assinatura}) async {
-    return await ElginSatPlatform.instance.associarAssinatura(assinatura: assinatura);
+  Future<ResponseAssinatura?> associarAssinatura(
+      {required Map<String, dynamic> assinatura}) async {
+    return await ElginSatPlatform.instance
+        .associarAssinatura(assinatura: assinatura);
   }
 
   //Faz o desbloqueio do sat quando possível e retorna um  objeto [ResponseStatus] com os dados
-  Future<ResponseStatus?> desbloquearSat({required String codigoAtivacao}) async {
+  Future<ResponseStatus?> desbloquearSat(
+      {required String codigoAtivacao}) async {
     return await ElginSatPlatform.instance.desbloquearSat(codigoAtivacao);
   }
 
@@ -67,24 +75,47 @@ class ElginSat {
   }
 
   //Faz um envio de nota e retorna um objeto [ResponseNota] com os dados
-  Future<ResponseNota?> enviarVenda({required int numeroSessao, required String codigoAtivacao, required String venda}) async {
-    return await ElginSatPlatform.instance.enviarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, venda: venda);
+  Future<ResponseNota?> enviarVenda(
+      {required int numeroSessao,
+      required String codigoAtivacao,
+      required String venda}) async {
+    return await ElginSatPlatform.instance.enviarVenda(
+        numeroSessao: numeroSessao,
+        codigoAtivacao: codigoAtivacao,
+        venda: venda);
   }
 
   //Faz um cancelamento de nota e retorna um objeto [ResponseNota] com os dados
-  Future<ResponseNota?> cancelarVenda({required int numeroSessao, required String codigoAtivacao, required String chave, required String cancelamento}) async {
-    return await ElginSatPlatform.instance.cancelarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, chave: chave, cancelamento: cancelamento);
+  Future<ResponseNota?> cancelarVenda(
+      {required int numeroSessao,
+      required String codigoAtivacao,
+      required String chave,
+      required String cancelamento}) async {
+    return await ElginSatPlatform.instance.cancelarVenda(
+        numeroSessao: numeroSessao,
+        codigoAtivacao: codigoAtivacao,
+        chave: chave,
+        cancelamento: cancelamento);
   }
 
-  Future<ResponseNota?> testeFimAFim({required int numeroSessao, required String codigoAtivacao, required String venda}) async {
-    return await ElginSatPlatform.instance.testeFimAFim(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, venda: venda);
+  Future<ResponseNota?> testeFimAFim(
+      {required int numeroSessao,
+      required String codigoAtivacao,
+      required String venda}) async {
+    return await ElginSatPlatform.instance.testeFimAFim(
+        numeroSessao: numeroSessao,
+        codigoAtivacao: codigoAtivacao,
+        venda: venda);
   }
 
-  Future<String?> consultarSessao({required String codigoAtivacao, String? sessaoConsultar}) async {
-    return await ElginSatPlatform.instance.consultarSessao(codigoAtivacao: codigoAtivacao, sessaoConsultar: sessaoConsultar);
+  Future<String?> consultarSessao(
+      {required String codigoAtivacao, String? sessaoConsultar}) async {
+    return await ElginSatPlatform.instance.consultarSessao(
+        codigoAtivacao: codigoAtivacao, sessaoConsultar: sessaoConsultar);
   }
 
   Future<String?> atualizarSoftware({required codigoAtivacao}) async {
-    return await ElginSatPlatform.instance.atualizarSoftware(codigoAtivacao: codigoAtivacao);
+    return await ElginSatPlatform.instance
+        .atualizarSoftware(codigoAtivacao: codigoAtivacao);
   }
 }

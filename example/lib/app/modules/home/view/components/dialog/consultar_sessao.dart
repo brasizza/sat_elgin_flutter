@@ -47,7 +47,8 @@ class _ConsultarSessaoState extends State<ConsultarSessao> {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  String? consultarSessao = await widget.controller.consultarSessao(sessaoConsultar: numeroSessaoEC.text);
+                  String? consultarSessao = await widget.controller
+                      .consultarSessao(sessaoConsultar: numeroSessaoEC.text);
 
                   if (consultarSessao != null) {
                     asuka.AsukaSnackbar.info('Sessão encontrada!').show();
