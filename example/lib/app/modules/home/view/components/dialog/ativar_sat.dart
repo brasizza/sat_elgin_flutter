@@ -126,14 +126,16 @@ class _AtivarSatState extends State<AtivarSat> {
                   await widget.controller.storage.setData(Consts.keyCodAtivacao, codAtivacaoEC.text);
                   await widget.controller.storage.setData(Consts.keyTIPOCERTIFICADO, tipoCertificadoEC.text);
                   await widget.controller.storage.setData(Consts.keyCODUF, codigoUFEC.text);
-                  final ativar = await widget.controller.ativarSat(
+                  widget.controller
+                      .ativarSat(
                     codAtivacao: codAtivacaoEC.text,
                     cnpj: cnpjEC.text,
                     uf: codigoUFEC.text,
                     certificado: tipoCertificadoEC.text,
-                  );
-
-                  Navigator.pop(context, ativar);
+                  )
+                      .then((ativar) {
+                    Navigator.pop(context, ativar);
+                  });
                   // if (await widget.controller.salvarDados(codAtivacao: codInstalacaoEC.text, codSerial: codSerialEC.text)) {
                   //   Navigator.pop(context);
                   // }

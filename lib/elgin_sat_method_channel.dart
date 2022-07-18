@@ -1,8 +1,6 @@
 import 'dart:developer';
 
 import 'package:elgin_sat/elgin_sat.dart';
-import 'package:elgin_sat/models/response_log.dart';
-import 'package:elgin_sat/models/response_nota_emitida.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 

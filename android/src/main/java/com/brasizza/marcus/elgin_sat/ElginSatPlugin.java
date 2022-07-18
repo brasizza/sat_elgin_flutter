@@ -147,8 +147,6 @@ public class ElginSatPlugin implements FlutterPlugin, MethodCallHandler, Activit
 
 
 
-
-
     }
   }
 

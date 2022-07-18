@@ -15,12 +15,24 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  String modelo = '';
+  @override
+  void initState() {
+    super.initState();
+
+    widget.controller.pegarModeloSat().then((sat) {
+      setState(() {
+        modelo = sat['model'];
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        title: const Text('SAT ELGIN!'),
+        title: Text('SAT $modelo !'),
         centerTitle: true,
         leading: InkWell(
           onTap: () async {

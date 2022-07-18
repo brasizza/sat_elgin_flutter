@@ -10,7 +10,7 @@ class LogSat extends StatelessWidget {
   Widget build(BuildContext context) {
     log(statusText);
     return Scaffold(
-      appBar: AppBar(title: Text('LOG SAT')),
+      appBar: AppBar(title: const Text('LOG SAT')),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),

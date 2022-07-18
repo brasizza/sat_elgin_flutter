@@ -12,7 +12,7 @@ import '../../controller/acoes_controller.dart';
 
 class AcoesSat extends StatelessWidget {
   final AcoesController _controller;
-  AcoesSat({Key? key, required AcoesController controller})
+  const AcoesSat({Key? key, required AcoesController controller})
       : _controller = controller,
         super(key: key);
 
@@ -22,8 +22,8 @@ class AcoesSat extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 18.0),
       child: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 5, mainAxisSpacing: 5, childAspectRatio: 2),
-        padding: EdgeInsets.only(left: 10, right: 10),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 5, mainAxisSpacing: 5, childAspectRatio: 2),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 8.0),
@@ -161,18 +161,19 @@ class AcoesSat extends StatelessWidget {
               child: const Text("Cancelar a venda")),
           ElevatedButton(
               onPressed: () async {
-                ResponseLog? logSat = await _controller.logSat(codigoAtivacao: _controller.storage.getData(Consts.keyCodAtivacao));
-                if (logSat != null) {
-                  asuka.AsukaSnackbar.info(logSat.mensagem).show();
+                _controller.logSat(codigoAtivacao: _controller.storage.getData(Consts.keyCodAtivacao)).then((logSat) {
+                  if (logSat != null) {
+                    asuka.AsukaSnackbar.info(logSat.mensagem).show();
 
-                  Navigator.of(context).push(PageRouteBuilder(
-                      opaque: false,
-                      pageBuilder: (BuildContext context, _, __) => LogSat(
-                            statusText: logSat.log,
-                          )));
-                } else {
-                  asuka.AsukaSnackbar.warning('Falha ao recuperar').show();
-                }
+                    Navigator.of(context).push(PageRouteBuilder(
+                        opaque: false,
+                        pageBuilder: (BuildContext context, _, __) => LogSat(
+                              statusText: logSat.log,
+                            )));
+                  } else {
+                    asuka.AsukaSnackbar.warning('Falha ao recuperar').show();
+                  }
+                });
               },
               child: const Text("Log sat")),
         ],

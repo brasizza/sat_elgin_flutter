@@ -1,7 +1,4 @@
 import 'package:elgin_sat/elgin_sat.dart';
-import 'package:elgin_sat/models/response_log.dart';
-import 'package:elgin_sat/models/response_nota_emitida.dart';
-import 'package:elgin_sat/models/response_status.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'elgin_sat_method_channel.dart';
