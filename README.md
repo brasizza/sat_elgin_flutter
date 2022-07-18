@@ -4,7 +4,7 @@
 
 ## Testes
 Este package foi testado nos seguintes sats
-| SAT | README |ANDROID|
+| SAT | Aparelho |ANDROID|
 | ------ | ------ |-----|
 |SMART SAT| [Link](https://www.elgin.com.br/Produtos/automacao/sat-mfe/smart-sat)|10 e 11
 |SAT@GO| [Link](http://www.bematech.com.br/produto/rb-2000)|10 e 11
