@@ -14,7 +14,7 @@ Como se trata de um compomente que se comunica com libs externas, serão necess�
 
 1 - Na sua pasta android/app, mude o seu minSdk para 21 (minSdkVersion 21) , pois os componentes da elgin utilizam uma dependência que é necessário subir a versão.
 
-2 - Baixar a última versão do sdk que estiver [SDK SAT](https://github.com/ElginDeveloperCommunity/SAT/blob/master/Elgin/SMART%20SAT/Biblioteca%20Android/satelgin-8.0.1-release.aar)  - No momento desse readme a versão das libs está em *8.0.1* e funciona tanto nos sat da Elgin quanto da Bematech!
+2 - Baixar a última versão do sdk que estiver [SDK SAT](https://github.com/ElginDeveloperCommunity/SAT/tree/master/Elgin/SMART%20SAT/Biblioteca%20Android)  - No momento desse readme a versão das libs está em *8.0.1* e funciona tanto nos sat da Elgin quanto da Bematech!
 
 3 - ir no seu projeto , pasta android/app e criar uma pasta chamada libs e colocar o arquivo .aar lá dentro
 
