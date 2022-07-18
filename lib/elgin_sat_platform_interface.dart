@@ -32,8 +32,7 @@ abstract class ElginSatPlatform extends PlatformInterface {
     throw UnimplementedError('deviceInfo() has not been implemented.');
   }
 
-  Future<ResponseStatus?> consultarStatusSat(
-      {int? numeroSessao, required String codigoAtivacao}) {
+  Future<ResponseStatus?> consultarStatusSat({int? numeroSessao, required String codigoAtivacao}) {
     throw UnimplementedError('consultarStatusSat() has not been implemented.');
   }
 
@@ -41,8 +40,7 @@ abstract class ElginSatPlatform extends PlatformInterface {
     throw UnimplementedError('consultarSat() has not been implemented.');
   }
 
-  Future<ResponseAtivacao?> ativarSat(
-      {required Map<String, dynamic> dadosAtivacao}) {
+  Future<ResponseAtivacao?> ativarSat({required Map<String, dynamic> dadosAtivacao}) {
     throw UnimplementedError('ativarSat() has not been implemented.');
   }
 
@@ -50,8 +48,7 @@ abstract class ElginSatPlatform extends PlatformInterface {
     throw UnimplementedError('logSat() has not been implemented.');
   }
 
-  Future<ResponseAssinatura?> associarAssinatura(
-      {required Map<String, dynamic> assinatura}) {
+  Future<ResponseAssinatura?> associarAssinatura({required Map<String, dynamic> assinatura}) {
     throw UnimplementedError('associarAssinatura() has not been implemented.');
   }
 
@@ -63,18 +60,23 @@ abstract class ElginSatPlatform extends PlatformInterface {
     throw UnimplementedError('bloquearSat() has not been implemented.');
   }
 
-  Future<ResponseNota?> enviarVenda(
-      {required int numeroSessao,
-      required String codigoAtivacao,
-      required String venda}) {
+  Future<ResponseNota?> enviarVenda({required int numeroSessao, required String codigoAtivacao, required String venda}) {
     throw UnimplementedError('enviarVenda() has not been implemented.');
   }
 
-  Future<ResponseNota?> cancelarVenda(
-      {required int numeroSessao,
-      required String codigoAtivacao,
-      required String chave,
-      required String cancelamento}) {
+  Future<ResponseNota?> cancelarVenda({required int numeroSessao, required String codigoAtivacao, required String chave, required String cancelamento}) {
     throw UnimplementedError('cancelarVenda() has not been implemented.');
+  }
+
+  Future testeFimAFim({required int numeroSessao, required String codigoAtivacao, required String venda}) {
+    throw UnimplementedError('testeFimAFim() has not been implemented.');
+  }
+
+  Future<String?> consultarSessao({required String codigoAtivacao, String? sessaoConsultar}) {
+    throw UnimplementedError('consultarSessao() has not been implemented.');
+  }
+
+  Future<String?> atualizarSoftware({required codigoAtivacao}) {
+    throw UnimplementedError('atualizarSoftware() has not been implemented.');
   }
 }

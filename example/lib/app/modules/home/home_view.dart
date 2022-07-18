@@ -11,19 +11,22 @@ class HomeView extends StatefulWidget {
   const HomeView({Key? key, required this.controller}) : super(key: key);
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<HomeView> createState() => HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class HomeViewState extends State<HomeView> {
   String modelo = '';
   @override
   void initState() {
     super.initState();
-
     widget.controller.pegarModeloSat().then((sat) {
-      setState(() {
-        modelo = sat['model'];
-      });
+      mudarModelo(sat['model']);
+    });
+  }
+
+  void mudarModelo(String modeloSat) {
+    setState(() {
+      modelo = modeloSat;
     });
   }
 
@@ -41,8 +44,7 @@ class _HomeViewState extends State<HomeView> {
                 backgroundColor: Colors.transparent,
                 builder: (_) {
                   return ConfigSat(
-                    controller: ConfigController.instance(
-                        storage: widget.controller.storage),
+                    controller: ConfigController.instance(storage: widget.controller.storage),
                   );
                 });
             setState(() {});
@@ -59,12 +61,8 @@ class _HomeViewState extends State<HomeView> {
       ),
       body: Visibility(
         visible: widget.controller.storage.hasData(Consts.keyCodAtivacao),
-        replacement: const Center(
-            child:
-                Text("Faça a configuração do seu sat.\nClique na engrenagem!")),
-        child: AcoesSat(
-            controller: AcoesController.instance(
-                localStorage: widget.controller.storage)),
+        replacement: const Center(child: Text("Faça a configuração do seu sat.\nClique na engrenagem!")),
+        child: AcoesSat(controller: AcoesController.instance(localStorage: widget.controller.storage)),
       ),
     );
   }

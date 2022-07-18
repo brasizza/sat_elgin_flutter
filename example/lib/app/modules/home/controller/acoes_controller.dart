@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:asyncstate/asyncstate.dart';
 import 'package:elgin_sat/elgin_sat.dart';
 import 'package:elgin_sat_example/app/core/consts.dart';
@@ -16,24 +18,17 @@ class AcoesController with AsyncStateMixin {
     return _instance!;
   }
 
-  Future<ResponseAtivacao?> ativarSat(
-      {required String codAtivacao,
-      required String cnpj,
-      required String uf,
-      required String certificado}) async {
+  Future<ResponseAtivacao?> ativarSat({required String codAtivacao, required String cnpj, required String uf, required String certificado}) async {
     final Map<String, dynamic> ativacao = {
       'subComando': int.parse(certificado),
       'codAtivacao': (codAtivacao),
       'cnpj': (cnpj),
       'cUF': int.parse(uf),
     };
-    return await ElginSat.instance
-        .ativarSat(dadosAtivacao: ativacao)
-        .asyncLoader();
+    return await ElginSat.instance.ativarSat(dadosAtivacao: ativacao).asyncLoader();
   }
 
-  Future<ResponseAssinatura?> associarAssinatura(
-      {required String cnpjSH, required String assinatura}) async {
+  Future<ResponseAssinatura?> associarAssinatura({required String cnpjSH, required String assinatura}) async {
     await storage.setData(Consts.keyCNPJSH, cnpjSH);
 
     String codAtivacao = storage.getData(Consts.keyCodAtivacao);
@@ -43,15 +38,19 @@ class AcoesController with AsyncStateMixin {
       'cnpjSh': (cnpjSH) + (cnpjContribuinte),
       'assinaturaAC': assinatura,
     };
-    return await ElginSat.instance
-        .associarAssinatura(assinatura: assinaturaSat)
-        .asyncLoader();
+    return await ElginSat.instance.associarAssinatura(assinatura: assinaturaSat).asyncLoader();
   }
 
   Future<ResponseStatus?> consultarStatusSat({required codAtivacao}) async {
-    return await ElginSat.instance
-        .consultarStatusSat(codigoAtivacao: codAtivacao)
-        .asyncLoader();
+    return await ElginSat.instance.consultarStatusSat(codigoAtivacao: codAtivacao).asyncLoader();
+  }
+
+  Future<Map<String, dynamic>?> pegarModeloSat() async {
+    final device = await ElginSat.instance.deviceInfo().asyncLoader();
+    if (device != null) {
+      return json.decode(device);
+    }
+    return null;
   }
 
   Future<ResponseStatus?> consultarSat() async {
@@ -59,42 +58,35 @@ class AcoesController with AsyncStateMixin {
   }
 
   Future<ResponseStatus?> desbloquearSat({required String codAtivacao}) async {
-    return await ElginSat.instance
-        .desbloquearSat(codigoAtivacao: codAtivacao)
-        .asyncLoader();
+    return await ElginSat.instance.desbloquearSat(codigoAtivacao: codAtivacao).asyncLoader();
   }
 
   Future<ResponseLog?> logSat({required String codigoAtivacao}) async {
-    return await ElginSat.instance
-        .logSat(codigoAtivacao: codigoAtivacao)
-        .asyncLoader();
+    return await ElginSat.instance.logSat(codigoAtivacao: codigoAtivacao).asyncLoader();
   }
 
   Future<ResponseStatus?> bloquearSat({required codAtivacao}) async {
-    return await ElginSat.instance
-        .bloquearSat(codigoAtivacao: codAtivacao)
-        .asyncLoader();
+    return await ElginSat.instance.bloquearSat(codigoAtivacao: codAtivacao).asyncLoader();
   }
 
-  Future<ResponseNota?> enviarVenda(
-      {required String venda,
-      required int numeroSessao,
-      required String codigoAtivacao}) async {
-    return await ElginSat.instance.enviarVenda(
-        numeroSessao: numeroSessao,
-        codigoAtivacao: codigoAtivacao,
-        venda: venda);
+  Future<ResponseNota?> enviarVenda({required String venda, required int numeroSessao, required String codigoAtivacao}) async {
+    return await ElginSat.instance.enviarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, venda: venda).asyncLoader();
   }
 
-  Future<ResponseNota?> cancelarVenda(
-      {required int numeroSessao,
-      required String codigoAtivacao,
-      required String chave,
-      required String cancelamento}) async {
-    return await ElginSat.instance.cancelarVenda(
-        numeroSessao: numeroSessao,
-        codigoAtivacao: codigoAtivacao,
-        chave: chave,
-        cancelamento: cancelamento);
+  Future<ResponseNota?> cancelarVenda({required int numeroSessao, required String codigoAtivacao, required String chave, required String cancelamento}) async {
+    return await ElginSat.instance.cancelarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, chave: chave, cancelamento: cancelamento).asyncLoader();
+  }
+
+  Future<ResponseNota?> testeFimAFim({required String venda, required int numeroSessao, required String codigoAtivacao}) async {
+    return await ElginSat.instance.testeFimAFim(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, venda: venda).asyncLoader();
+  }
+
+  Future<String?> consultarSessao({String? sessaoConsultar}) async {
+    String codigoAtivacao = storage.getData(Consts.keyCodAtivacao);
+    return await ElginSat.instance.consultarSessao(codigoAtivacao: codigoAtivacao, sessaoConsultar: sessaoConsultar).asyncLoader();
+  }
+
+  Future<String?> atualizarSoftware({required codigoAtivacao}) async {
+    return await ElginSat.instance.atualizarSoftware(codigoAtivacao: codigoAtivacao).asyncLoader();
   }
 }

@@ -68,15 +68,18 @@ Tem um exemplo de como o manifest deverá ficar [Aqui](https://gist.github.com/b
 |cancelarVenda|número de sessão,código de ativação, Map[chave,xml de cancelamento]|Cancela a nota de acordo com os parâmetros acima|
 |bloquearSat|número de sessão,código de ativação|Faz o bloqueio manual do sat|
 |desbloquearSat|número de sessão,código de ativação| Faz o deslobloqueio manual do sat quando possível
+|testeFimAFim|número de sessão,código de ativação,xml|Faz um teste de fim a fim no sat com base no xml enviado|
+|consultarNumeroSessao|número de sessão,código de ativação,número de sessão para consulta|Consulta a resposta de um número de sessão específico|
+|atualizarSoftwareSat|número de sessão,código de ativação|Faz a atualização do software base do sat|
+
+
+
 
 # Não implementados ainda
 | Metodo | Entrada | Descrição |
 | ------ | ------ |-----|
-|testeFimAFim|número de sessão,código de ativação,xml|Faz um teste de fim a fim no sat com base no xml enviado|
 |trocarCodigoDeAtivacao|número de sessão,metodo de troca , código de ativação,código novo, confirmação do código|Troca o código de ativação, dependendo do método de troca, utilizando a senha emergencial ou a senha anterior do aparelho|
 |configurarInterfaceDeRede|número de sessão,código de ativação,dados|Configura a rede, DHCP ou ip fixo de acordo com as configurações|
-|consultarNumeroSessao|número de sessão,código de ativação,número de sessão para consulta|Consulta a resposta de um número de sessão específico|
-|atualizarSoftwareSat|número de sessão,código de ativação|Faz a atualização do software base do sat|
 |comunicarCertificadoIcpbrasil|número de sessão,código de ativação,certificado|Associa o sat com o certificado do ICP BRASIL|
 
 
