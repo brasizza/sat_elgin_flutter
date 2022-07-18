@@ -1,8 +1,9 @@
-## 0.0.1
+## 0.0.2
+Correção do CHANGELOG!
+Métodos disponíveis no README!
 
+## 0.0.1
 * Primeiro commit com os principais métodos 
-| Metodo | Entrada | Descrição |
-| ------ | ------ |-----|
 |deviceInfo|void|Pegar o modelo do sat conectado|
 |ativarSAT|número de sessão, Map[subcomando (1 ou 2 ), cnpj , codUf]| Ativa o sat para uso|
 |associarAssinatura| número de sessão , Map[codigo de ativação,concatenação do cnpj + cnpj da software house , |assinatura AC]|Associa a assinaturada sofware house|

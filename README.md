@@ -11,8 +11,8 @@ Esse package te ajudou? Me ajude a manter o projeto ativo
 Este package foi testado nos seguintes sats
 | SAT | Aparelho |ANDROID|
 | ------ | ------ |-----|
-|SMART SAT| [Link](https://www.elgin.com.br/Produtos/automacao/sat-mfe/smart-sat)|10 e 11
-|SAT@GO| [Link](http://www.bematech.com.br/produto/rb-2000)|10 e 11
+|SMART SAT| [Link](https://www.elgin.com.br/Produtos/automacao/sat-mfe/smart-sat)|10 e 11|
+|SAT@GO| [Link](http://www.bematech.com.br/produto/rb-2000)|10 e 11|
 
 ## Configurando o package  (IMPORTANTE)
 Como se trata de um compomente que se comunica com libs externas, serão necessários fazer algumas (pouquissimas) modificações na sua pasta android.
