@@ -2,6 +2,11 @@
 
 **Este package inicialmente funciona somente em android.**
 
+Esse package te ajudou? Me ajude a manter o projeto ativo 
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?business=5BMWJ9CYNVDAE&no_recurring=0&currency_code=BRL)
+
+
 ## Testes
 Este package foi testado nos seguintes sats
 | SAT | Aparelho |ANDROID|
