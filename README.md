@@ -1,4 +1,4 @@
-# SAT DIMEP/ELGIN
+# SAT BEMATECH/ELGIN
 
 **Este package inicialmente funciona somente em android.**
 
