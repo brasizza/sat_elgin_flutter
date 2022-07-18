@@ -25,9 +25,11 @@ class _AtivarSatState extends State<AtivarSat> {
   void initState() {
     super.initState();
 
-    bool existeAtivacao = widget.controller.storage.hasData(Consts.keyCodAtivacao);
+    bool existeAtivacao =
+        widget.controller.storage.hasData(Consts.keyCodAtivacao);
     if (existeAtivacao) {
-      codAtivacaoEC.text = (widget.controller.storage.getData(Consts.keyCodAtivacao));
+      codAtivacaoEC.text =
+          (widget.controller.storage.getData(Consts.keyCodAtivacao));
     } else {
       codAtivacaoEC.clear();
     }
@@ -39,9 +41,11 @@ class _AtivarSatState extends State<AtivarSat> {
       cnpjEC.clear();
     }
 
-    bool existeCertificado = widget.controller.storage.hasData(Consts.keyTIPOCERTIFICADO);
+    bool existeCertificado =
+        widget.controller.storage.hasData(Consts.keyTIPOCERTIFICADO);
     if (existeCertificado) {
-      tipoCertificadoEC.text = (widget.controller.storage.getData(Consts.keyTIPOCERTIFICADO));
+      tipoCertificadoEC.text =
+          (widget.controller.storage.getData(Consts.keyTIPOCERTIFICADO));
     } else {
       tipoCertificadoEC.clear();
     }
@@ -122,10 +126,14 @@ class _AtivarSatState extends State<AtivarSat> {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  await widget.controller.storage.setData(Consts.keyCNPJ, cnpjEC.text);
-                  await widget.controller.storage.setData(Consts.keyCodAtivacao, codAtivacaoEC.text);
-                  await widget.controller.storage.setData(Consts.keyTIPOCERTIFICADO, tipoCertificadoEC.text);
-                  await widget.controller.storage.setData(Consts.keyCODUF, codigoUFEC.text);
+                  await widget.controller.storage
+                      .setData(Consts.keyCNPJ, cnpjEC.text);
+                  await widget.controller.storage
+                      .setData(Consts.keyCodAtivacao, codAtivacaoEC.text);
+                  await widget.controller.storage.setData(
+                      Consts.keyTIPOCERTIFICADO, tipoCertificadoEC.text);
+                  await widget.controller.storage
+                      .setData(Consts.keyCODUF, codigoUFEC.text);
                   widget.controller
                       .ativarSat(
                     codAtivacao: codAtivacaoEC.text,

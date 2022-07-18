@@ -41,7 +41,8 @@ class _HomeViewState extends State<HomeView> {
                 backgroundColor: Colors.transparent,
                 builder: (_) {
                   return ConfigSat(
-                    controller: ConfigController.instance(storage: widget.controller.storage),
+                    controller: ConfigController.instance(
+                        storage: widget.controller.storage),
                   );
                 });
             setState(() {});
@@ -58,8 +59,12 @@ class _HomeViewState extends State<HomeView> {
       ),
       body: Visibility(
         visible: widget.controller.storage.hasData(Consts.keyCodAtivacao),
-        replacement: const Center(child: Text("Faça a configuração do seu sat.\nClique na engrenagem!")),
-        child: AcoesSat(controller: AcoesController.instance(localStorage: widget.controller.storage)),
+        replacement: const Center(
+            child:
+                Text("Faça a configuração do seu sat.\nClique na engrenagem!")),
+        child: AcoesSat(
+            controller: AcoesController.instance(
+                localStorage: widget.controller.storage)),
       ),
     );
   }

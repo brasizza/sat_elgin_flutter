@@ -29,27 +29,35 @@ class ElginSat {
     return ElginSatPlatform.instance.deviceInfo();
   }
 
-  Future<ResponseStatus?> consultarStatusSat({int? numeroSessao, required String codigoAtivacao}) async {
-    return await ElginSatPlatform.instance.consultarStatusSat(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao);
+  Future<ResponseStatus?> consultarStatusSat(
+      {int? numeroSessao, required String codigoAtivacao}) async {
+    return await ElginSatPlatform.instance.consultarStatusSat(
+        numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao);
   }
 
   Future<ResponseStatus?> consultarSat({int? numeroSessao}) async {
-    return await ElginSatPlatform.instance.consultarSat(numeroSessao: numeroSessao);
+    return await ElginSatPlatform.instance
+        .consultarSat(numeroSessao: numeroSessao);
   }
 
-  Future<ResponseAtivacao?> ativarSat({required Map<String, dynamic> dadosAtivacao}) async {
-    return await ElginSatPlatform.instance.ativarSat(dadosAtivacao: dadosAtivacao);
+  Future<ResponseAtivacao?> ativarSat(
+      {required Map<String, dynamic> dadosAtivacao}) async {
+    return await ElginSatPlatform.instance
+        .ativarSat(dadosAtivacao: dadosAtivacao);
   }
 
   Future<ResponseLog?> logSat({required String codigoAtivacao}) async {
     return await ElginSatPlatform.instance.logSat(codigoAtivacao);
   }
 
-  Future<ResponseAssinatura?> associarAssinatura({required Map<String, dynamic> assinatura}) async {
-    return await ElginSatPlatform.instance.associarAssinatura(assinatura: assinatura);
+  Future<ResponseAssinatura?> associarAssinatura(
+      {required Map<String, dynamic> assinatura}) async {
+    return await ElginSatPlatform.instance
+        .associarAssinatura(assinatura: assinatura);
   }
 
-  Future<ResponseStatus?> desbloquearSat({required String codigoAtivacao}) async {
+  Future<ResponseStatus?> desbloquearSat(
+      {required String codigoAtivacao}) async {
     return await ElginSatPlatform.instance.desbloquearSat(codigoAtivacao);
   }
 
@@ -57,11 +65,25 @@ class ElginSat {
     return await ElginSatPlatform.instance.bloquearSat(codigoAtivacao);
   }
 
-  Future<ResponseNota?> enviarVenda({required int numeroSessao, required String codigoAtivacao, required String venda}) async {
-    return await ElginSatPlatform.instance.enviarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, venda: venda);
+  Future<ResponseNota?> enviarVenda(
+      {required int numeroSessao,
+      required String codigoAtivacao,
+      required String venda}) async {
+    return await ElginSatPlatform.instance.enviarVenda(
+        numeroSessao: numeroSessao,
+        codigoAtivacao: codigoAtivacao,
+        venda: venda);
   }
 
-  Future<ResponseNota?> cancelarVenda({required int numeroSessao, required String codigoAtivacao, required String chave, required String cancelamento}) async {
-    return await ElginSatPlatform.instance.cancelarVenda(numeroSessao: numeroSessao, codigoAtivacao: codigoAtivacao, chave: chave, cancelamento: cancelamento);
+  Future<ResponseNota?> cancelarVenda(
+      {required int numeroSessao,
+      required String codigoAtivacao,
+      required String chave,
+      required String cancelamento}) async {
+    return await ElginSatPlatform.instance.cancelarVenda(
+        numeroSessao: numeroSessao,
+        codigoAtivacao: codigoAtivacao,
+        chave: chave,
+        cancelamento: cancelamento);
   }
 }

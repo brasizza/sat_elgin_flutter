@@ -20,9 +20,11 @@ class _ConfigSatState extends State<ConfigSat> {
   @override
   void initState() {
     super.initState();
-    bool existeAtivacao = widget.controller.storage.hasData(Consts.keyCodAtivacao);
+    bool existeAtivacao =
+        widget.controller.storage.hasData(Consts.keyCodAtivacao);
     if (existeAtivacao) {
-      codInstalacaoEC.text = (widget.controller.storage.getData(Consts.keyCodAtivacao));
+      codInstalacaoEC.text =
+          (widget.controller.storage.getData(Consts.keyCodAtivacao));
     } else {
       codInstalacaoEC.clear();
     }
@@ -57,7 +59,8 @@ class _ConfigSatState extends State<ConfigSat> {
                           decoration: const InputDecoration(
                             hintStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12.0)),
                             ),
                           ),
                         ),
@@ -77,7 +80,8 @@ class _ConfigSatState extends State<ConfigSat> {
                           decoration: const InputDecoration(
                             hintStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12.0)),
                             ),
                           ),
                         ),
@@ -90,7 +94,9 @@ class _ConfigSatState extends State<ConfigSat> {
                   width: MediaQuery.of(context).size.width * .9,
                   child: ElevatedButton(
                     onPressed: () async {
-                      if (await widget.controller.salvarDados(codAtivacao: codInstalacaoEC.text, codSerial: codSerialEC.text)) {
+                      if (await widget.controller.salvarDados(
+                          codAtivacao: codInstalacaoEC.text,
+                          codSerial: codSerialEC.text)) {
                         Navigator.pop(context);
                       }
                     },

@@ -26,7 +26,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.numeroSessao,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -40,7 +41,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.codStatus,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -54,7 +56,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.mensagemSefaz,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -68,7 +71,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.nserieSat,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -82,7 +86,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.tipoLan,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -96,7 +101,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.lanIp,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -110,7 +116,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.lanMac,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -124,7 +131,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.lanGateway,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -138,7 +146,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       "${status.lanDns}/${status.lanDns2}",
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -152,7 +161,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.statusLan,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -166,7 +176,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.nivelBateria,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -180,7 +191,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.memoriaTotal,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -194,7 +206,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.memoriaUsada,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -208,7 +221,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.dataAtual,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -222,7 +236,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.versaoSoftwareSat,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -236,7 +251,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.versaoLayout,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -250,7 +266,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.ultimoCfe,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -264,7 +281,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.numeroInicial,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -278,7 +296,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.numeroFinal,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -292,7 +311,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.dataUltimaCfe,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -306,7 +326,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.dataComunicacaoSefaz,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -320,7 +341,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.dataEmissaoCertificado,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),
@@ -334,7 +356,8 @@ class StatusSat extends StatelessWidget {
                     Text(
                       status.dataVencimentoCertificado,
                       textAlign: TextAlign.start,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 10),
                     ),
                   ],
                 ),

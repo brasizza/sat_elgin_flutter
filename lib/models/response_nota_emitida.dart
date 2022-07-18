@@ -29,7 +29,19 @@ class ResponseNota {
     required this.assinaturaQrcode,
   });
 
-  ResponseNota copyWith({String? numeroSessao, String? codStatus, String? mensagem, String? cod, String? mensagemSefaz, String? xmlBase64, String? timeStamp, String? chave, String? valorTotal, String? dadosCnpj, String? assinaturaQrcode, String? codAlerta}) {
+  ResponseNota copyWith(
+      {String? numeroSessao,
+      String? codStatus,
+      String? mensagem,
+      String? cod,
+      String? mensagemSefaz,
+      String? xmlBase64,
+      String? timeStamp,
+      String? chave,
+      String? valorTotal,
+      String? dadosCnpj,
+      String? assinaturaQrcode,
+      String? codAlerta}) {
     return ResponseNota(
       numeroSessao: numeroSessao ?? this.numeroSessao,
       codStatus: codStatus ?? this.codStatus,
@@ -81,7 +93,8 @@ class ResponseNota {
 
   String toJson() => json.encode(toMap());
 
-  factory ResponseNota.fromJson(String source) => ResponseNota.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ResponseNota.fromJson(String source) =>
+      ResponseNota.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -92,12 +105,32 @@ class ResponseNota {
   bool operator ==(covariant ResponseNota other) {
     if (identical(this, other)) return true;
 
-    return other.numeroSessao == numeroSessao && other.codStatus == codStatus && other.mensagem == mensagem && other.cod == cod && other.mensagemSefaz == mensagemSefaz && other.xmlBase64 == xmlBase64 && other.timeStamp == timeStamp && other.chave == chave && other.valorTotal == valorTotal && other.dadosCnpj == dadosCnpj && other.assinaturaQrcode == assinaturaQrcode;
+    return other.numeroSessao == numeroSessao &&
+        other.codStatus == codStatus &&
+        other.mensagem == mensagem &&
+        other.cod == cod &&
+        other.mensagemSefaz == mensagemSefaz &&
+        other.xmlBase64 == xmlBase64 &&
+        other.timeStamp == timeStamp &&
+        other.chave == chave &&
+        other.valorTotal == valorTotal &&
+        other.dadosCnpj == dadosCnpj &&
+        other.assinaturaQrcode == assinaturaQrcode;
   }
 
   @override
   int get hashCode {
-    return numeroSessao.hashCode ^ codStatus.hashCode ^ mensagem.hashCode ^ cod.hashCode ^ mensagemSefaz.hashCode ^ xmlBase64.hashCode ^ timeStamp.hashCode ^ chave.hashCode ^ valorTotal.hashCode ^ dadosCnpj.hashCode ^ assinaturaQrcode.hashCode;
+    return numeroSessao.hashCode ^
+        codStatus.hashCode ^
+        mensagem.hashCode ^
+        cod.hashCode ^
+        mensagemSefaz.hashCode ^
+        xmlBase64.hashCode ^
+        timeStamp.hashCode ^
+        chave.hashCode ^
+        valorTotal.hashCode ^
+        dadosCnpj.hashCode ^
+        assinaturaQrcode.hashCode;
   }
 
   factory ResponseNota.fromSat(List<String?> consulta) {

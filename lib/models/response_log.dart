@@ -78,7 +78,8 @@ class ResponseLog {
 
   String toJson() => json.encode(toMap());
 
-  factory ResponseLog.fromJson(String source) => ResponseLog.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ResponseLog.fromJson(String source) =>
+      ResponseLog.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -89,11 +90,21 @@ class ResponseLog {
   bool operator ==(covariant ResponseLog other) {
     if (identical(this, other)) return true;
 
-    return other.numeroSessao == numeroSessao && other.codStatus == codStatus && other.mensagem == mensagem && other.cod == cod && other.mensagemSefaz == mensagemSefaz && other.log == log;
+    return other.numeroSessao == numeroSessao &&
+        other.codStatus == codStatus &&
+        other.mensagem == mensagem &&
+        other.cod == cod &&
+        other.mensagemSefaz == mensagemSefaz &&
+        other.log == log;
   }
 
   @override
   int get hashCode {
-    return numeroSessao.hashCode ^ codStatus.hashCode ^ mensagem.hashCode ^ cod.hashCode ^ mensagemSefaz.hashCode ^ log.hashCode;
+    return numeroSessao.hashCode ^
+        codStatus.hashCode ^
+        mensagem.hashCode ^
+        cod.hashCode ^
+        mensagemSefaz.hashCode ^
+        log.hashCode;
   }
 }

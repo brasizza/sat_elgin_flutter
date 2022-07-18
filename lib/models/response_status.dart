@@ -90,7 +90,8 @@ class ResponseStatus {
       dataUltimaCfe: consultaMap.containsKey(23) ? consulta[23]! : '',
       dataComunicacaoSefaz: consultaMap.containsKey(24) ? consulta[24]! : '',
       dataEmissaoCertificado: consultaMap.containsKey(25) ? consulta[25]! : '',
-      dataVencimentoCertificado: consultaMap.containsKey(26) ? consulta[26]! : '',
+      dataVencimentoCertificado:
+          consultaMap.containsKey(26) ? consulta[26]! : '',
       estadoSat: consultaMap.containsKey(27) ? consulta[27]! : '',
     );
 
@@ -153,8 +154,10 @@ class ResponseStatus {
       numeroFinal: numeroFinal ?? this.numeroFinal,
       dataUltimaCfe: dataUltimaCfe ?? this.dataUltimaCfe,
       dataComunicacaoSefaz: dataComunicacaoSefaz ?? this.dataComunicacaoSefaz,
-      dataEmissaoCertificado: dataEmissaoCertificado ?? this.dataEmissaoCertificado,
-      dataVencimentoCertificado: dataVencimentoCertificado ?? this.dataVencimentoCertificado,
+      dataEmissaoCertificado:
+          dataEmissaoCertificado ?? this.dataEmissaoCertificado,
+      dataVencimentoCertificado:
+          dataVencimentoCertificado ?? this.dataVencimentoCertificado,
       estadoSat: estadoSat ?? this.estadoSat,
     );
   }
@@ -227,7 +230,8 @@ class ResponseStatus {
 
   String toJson() => json.encode(toMap());
 
-  factory ResponseStatus.fromJson(String source) => ResponseStatus.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ResponseStatus.fromJson(String source) =>
+      ResponseStatus.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -270,6 +274,33 @@ class ResponseStatus {
 
   @override
   int get hashCode {
-    return numeroSessao.hashCode ^ codStatus.hashCode ^ mensagem.hashCode ^ cod.hashCode ^ mensagemSefaz.hashCode ^ nserieSat.hashCode ^ tipoLan.hashCode ^ lanIp.hashCode ^ lanMac.hashCode ^ lanMask.hashCode ^ lanGateway.hashCode ^ lanDns.hashCode ^ lanDns2.hashCode ^ statusLan.hashCode ^ nivelBateria.hashCode ^ memoriaTotal.hashCode ^ memoriaUsada.hashCode ^ dataAtual.hashCode ^ versaoSoftwareSat.hashCode ^ versaoLayout.hashCode ^ ultimoCfe.hashCode ^ numeroInicial.hashCode ^ numeroFinal.hashCode ^ dataUltimaCfe.hashCode ^ dataComunicacaoSefaz.hashCode ^ dataEmissaoCertificado.hashCode ^ dataVencimentoCertificado.hashCode ^ estadoSat.hashCode;
+    return numeroSessao.hashCode ^
+        codStatus.hashCode ^
+        mensagem.hashCode ^
+        cod.hashCode ^
+        mensagemSefaz.hashCode ^
+        nserieSat.hashCode ^
+        tipoLan.hashCode ^
+        lanIp.hashCode ^
+        lanMac.hashCode ^
+        lanMask.hashCode ^
+        lanGateway.hashCode ^
+        lanDns.hashCode ^
+        lanDns2.hashCode ^
+        statusLan.hashCode ^
+        nivelBateria.hashCode ^
+        memoriaTotal.hashCode ^
+        memoriaUsada.hashCode ^
+        dataAtual.hashCode ^
+        versaoSoftwareSat.hashCode ^
+        versaoLayout.hashCode ^
+        ultimoCfe.hashCode ^
+        numeroInicial.hashCode ^
+        numeroFinal.hashCode ^
+        dataUltimaCfe.hashCode ^
+        dataComunicacaoSefaz.hashCode ^
+        dataEmissaoCertificado.hashCode ^
+        dataVencimentoCertificado.hashCode ^
+        estadoSat.hashCode;
   }
 }

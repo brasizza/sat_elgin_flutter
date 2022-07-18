@@ -67,7 +67,8 @@ class ResponseAssinatura {
 
   String toJson() => json.encode(toMap());
 
-  factory ResponseAssinatura.fromJson(String source) => ResponseAssinatura.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ResponseAssinatura.fromJson(String source) =>
+      ResponseAssinatura.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -78,11 +79,19 @@ class ResponseAssinatura {
   bool operator ==(covariant ResponseAssinatura other) {
     if (identical(this, other)) return true;
 
-    return other.numeroSessao == numeroSessao && other.codStatus == codStatus && other.mensagem == mensagem && other.cod == cod && other.mensagemSefaz == mensagemSefaz;
+    return other.numeroSessao == numeroSessao &&
+        other.codStatus == codStatus &&
+        other.mensagem == mensagem &&
+        other.cod == cod &&
+        other.mensagemSefaz == mensagemSefaz;
   }
 
   @override
   int get hashCode {
-    return numeroSessao.hashCode ^ codStatus.hashCode ^ mensagem.hashCode ^ cod.hashCode ^ mensagemSefaz.hashCode;
+    return numeroSessao.hashCode ^
+        codStatus.hashCode ^
+        mensagem.hashCode ^
+        cod.hashCode ^
+        mensagemSefaz.hashCode;
   }
 }

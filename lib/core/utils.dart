@@ -10,7 +10,8 @@ class Utils {
   }
 
   static String base64ToString(String baseString) {
-    String decoded = utf8.decode(base64.decode(baseString)); // username:password
+    String decoded =
+        utf8.decode(base64.decode(baseString)); // username:password
     return decoded;
   }
 }

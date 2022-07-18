@@ -66,7 +66,8 @@ class ResponseAtivacao {
 
   String toJson() => json.encode(toMap());
 
-  factory ResponseAtivacao.fromJson(String source) => ResponseAtivacao.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ResponseAtivacao.fromJson(String source) =>
+      ResponseAtivacao.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -77,11 +78,19 @@ class ResponseAtivacao {
   bool operator ==(covariant ResponseAtivacao other) {
     if (identical(this, other)) return true;
 
-    return other.numeroSessao == numeroSessao && other.codStatus == codStatus && other.mensagem == mensagem && other.cod == cod && other.mensagemSefaz == mensagemSefaz;
+    return other.numeroSessao == numeroSessao &&
+        other.codStatus == codStatus &&
+        other.mensagem == mensagem &&
+        other.cod == cod &&
+        other.mensagemSefaz == mensagemSefaz;
   }
 
   @override
   int get hashCode {
-    return numeroSessao.hashCode ^ codStatus.hashCode ^ mensagem.hashCode ^ cod.hashCode ^ mensagemSefaz.hashCode;
+    return numeroSessao.hashCode ^
+        codStatus.hashCode ^
+        mensagem.hashCode ^
+        cod.hashCode ^
+        mensagemSefaz.hashCode;
   }
 }

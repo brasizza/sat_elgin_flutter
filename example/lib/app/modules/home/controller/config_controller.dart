@@ -16,7 +16,8 @@ class ConfigController {
     return _instance!;
   }
 
-  Future<bool> salvarDados({required String codAtivacao, required String codSerial}) async {
+  Future<bool> salvarDados(
+      {required String codAtivacao, required String codSerial}) async {
     await storage.setData(Consts.keyCodAtivacao, codAtivacao);
     await storage.setData(Consts.keySerial, codSerial);
     return true;
