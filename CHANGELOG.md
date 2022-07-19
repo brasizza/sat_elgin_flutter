@@ -1,5 +1,5 @@
 ## 0.0.3
-Melhoria no changelog pelo [@felipecastrosales](github.com/felipecastrosales)
+Melhoria no changelog pelo [@felipecastrosales](https://github.com/felipecastrosales)
 
 ## 0.0.2
 Correção do CHANGELOG!
