@@ -1,6 +1,6 @@
 name: elgin_sat
 description: Package para utilização dos SATs da Elgin/Bematech de um jeito fácil e descomplicado.
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/brasizza/sat_elgin_flutter
 repository: https://github.com/brasizza/sat_elgin_flutter
 
