@@ -31,6 +31,10 @@ Como se trata de um compomente que se comunica com libs externas, serão necess�
         implementation fileTree(dir: 'libs', include: ['*.aar'])
     }
     ```
+    - Trocar o compileSdkVersion para `31`
+    - Trocar o minSdkVersion para `22`
+    - Trocar o targetSdkVersion `30`
+
 
 5. Depois disso você terá que fazer pequenas modificações no **AndroidManifest** (`android/app/src/main/AndroidManifest.xml`).
 
